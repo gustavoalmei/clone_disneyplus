@@ -1,6 +1,7 @@
 @use '../config/_variaveis';
 @use '../config/reset';
 @use '_hero';
+@use '_shows';
 
 
 @mixin text($fontSize:16px){
@@ -28,7 +29,6 @@
 
 body{
     background-color: variaveis.$corDeFundo;
-    font-family: Avenir, sans-serif;
 }
 
 .text{
