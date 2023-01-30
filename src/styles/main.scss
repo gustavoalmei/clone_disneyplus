@@ -1,0 +1,63 @@
+@use '../config/_variaveis';
+@use '../config/reset';
+@use '_hero';
+
+
+@mixin text($fontSize:16px){
+    font-size: $fontSize;
+    line-height: $fontSize + 10;
+    color: variaveis.$corPrincipal
+}
+
+@mixin title($fontSize: 40px){
+    @include text($fontSize);
+    color: variaveis.$corSecundaria;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+body{
+    background-color: variaveis.$corDeFundo;
+    font-family: Avenir, sans-serif;
+}
+
+.text{
+    @include text(12px);
+}
+
+.text--small{
+    @include text;
+}
+
+.text--big{
+    @include text(18px);
+}
+
+.link--text{
+    @include text(18px);
+    color: variaveis.$corSecundaria;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.title{
+    @include title;
+}
+
+.title--small{
+    @include title(28px);
+}
+
+.title--big{
+    @include title(44px);
+}

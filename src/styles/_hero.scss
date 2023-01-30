@@ -1,0 +1,57 @@
+@use '../config/variaveis';
+
+.hero{
+    padding: 5.6vw;
+    min-height: 100vh;
+    background-image: url(../images/hero_desktop.jpeg);
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+
+    &__content{
+        width: 620px;
+
+        &__branding{
+            img{
+                max-width: 320px;
+                margin: 0 auto 38px;
+            }
+        }
+
+        p{
+            margin-bottom: 20px;
+        }
+
+        .title--small{
+            margin-bottom: 44px;
+        }
+        
+        &__combos{
+            margin-bottom: 60px;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+
+            li{
+                width: calc(50% - 12px);
+
+                img{
+                    height: 65px;
+                    margin-bottom: 2vw;
+                }
+                
+                button{
+                    display: block;
+                    padding: 16.5px 24px;
+                    width: 100%;
+                    background-color: variaveis.$btnBgColor;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
