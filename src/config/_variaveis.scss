@@ -2,3 +2,16 @@ $corDeFundo: #040714;
 $corPrincipal: silver;
 $corSecundaria: #f9f9f9;
 $btnBgColor: #6421ff;
+
+// font
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
