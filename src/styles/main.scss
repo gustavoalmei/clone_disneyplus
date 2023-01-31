@@ -2,50 +2,64 @@
 @use '../config/reset';
 @use '_hero';
 @use '_shows';
+@use '_plans';
 
 
-@mixin text($fontSize:16px){
+@mixin text($fontSize: 16px) {
     font-size: $fontSize;
-    line-height: $fontSize + 10;
-    color: variaveis.$corPrincipal
+    line-height: $fontSize + 10px;
+    color: variaveis.$corPrincipal;
 }
 
-@mixin title($fontSize: 40px){
+@mixin title($fontSize: 40px) {
     @include text($fontSize);
     color: variaveis.$corSecundaria;
 }
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.link-text {
+    @include text(18px);
+    color: variaveis.$corSecundaria;
+    text-decoration: underline
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px);
+} 
 
 body{
     background-color: variaveis.$corDeFundo;
 }
 
-.text{
-    @include text;
-}
-
-.text--small{
-    @include text(12px);
-}
-
-.text--big{
-    @include text(18px);
-}
-
-.link--text{
-    @include text(18px);
-    color: variaveis.$corSecundaria;
-    text-decoration: underline;
+.button{
+    display: block;
+    padding: 16.5px 24px;
+    width: 100%;
+    background-color: variaveis.$btnBgColor;
+    border-radius: 4px;
     cursor: pointer;
-}
-
-.title{
-    @include title;
-}
-
-.title--small{
-    @include title(28px);
-}
-
-.title--big{
-    @include title(44px);
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    color: variaveis.$corSecundaria;
 }
