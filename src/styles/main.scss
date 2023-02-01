@@ -4,6 +4,7 @@
 @use '_shows';
 @use '_plans';
 @use '_avalible-devices';
+@use '_faq';
 
 
 @mixin text($fontSize: 16px) {
