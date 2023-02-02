@@ -5,6 +5,8 @@
 @use '_plans';
 @use '_avalible-devices';
 @use '_faq';
+@use '_footer';
+@use 'header';
 
 
 @mixin text($fontSize: 16px) {
@@ -30,7 +32,7 @@
     @include text(12px);
 }
 
-.link-text {
+.link--text {
     @include text(18px);
     color: variaveis.$corSecundaria;
     text-decoration: underline
@@ -53,17 +55,41 @@ body{
 }
 
 .button{
-    display: block;
-    padding: 16.5px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
     width: 100%;
-    background-color: variaveis.$btnBgColor;
+    height: 60px;
+    background-color: variaveis.$btnBgPrimaryColor;
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    margin-top: 2vw;
-    margin-bottom: 8px;
     color: variaveis.$corSecundaria;
+    border: 1px solid transparent;
+    text-decoration: none;
+
+    &:hover{
+        background-color: lighten(variaveis.$btnBgPrimaryColor, 5%);
+    }
+
+    &--secundary{
+        background-color: variaveis.$btnBgSecundaryColor;
+        &:hover{
+            background-color: lighten(variaveis.$btnBgSecundaryColor, 5%);
+        }
+    }
+
+    &--dark{
+        background-color: rgba(variaveis.$btnBgDarkColor, 0.8);
+        border-color: variaveis.$corSecundaria;
+        &:hover{
+            background-color: variaveis.$corSecundaria;
+            color: variaveis.$btnBgDarkColor;
+        }
+    }
 }
 
 .image-text-section{

@@ -6,9 +6,11 @@
     background-image: url(../images/hero_desktop.jpeg);
     background-size: cover;
     text-align: center;
-    display: flex;
-    align-items: center;
 
+    .button{
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
 
     &__content{
         width: 620px;
@@ -31,7 +33,6 @@
         
         &__combos{
             margin-bottom: 60px;
-            list-style-type: none;
             display: flex;
             justify-content: space-between;
 
@@ -41,17 +42,6 @@
                 img{
                     height: 65px;
                     margin-bottom: 2vw;
-                }
-                
-                button{
-                    display: block;
-                    padding: 16.5px 24px;
-                    width: 100%;
-                    background-color: variaveis.$btnBgColor;
-                    border-radius: 4px;
-                    cursor: pointer;
-                    text-transform: uppercase;
-                    margin-bottom: 8px;
                 }
             }
         }

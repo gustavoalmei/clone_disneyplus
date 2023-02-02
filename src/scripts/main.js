@@ -1,9 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {
     tabsMovies();
     faq();
-
+    fadeMenu();
 })
 
+function fadeMenu(){
+    let menu = document.querySelector('.hero').clientHeight;
+    
+    window.addEventListener('scroll', function(){
+        const alturaAtual = window.scrollY;
+        if(alturaAtual < menu){
+            document.querySelector('.header').classList.add('header--is-hidden');
+        }else{
+            document.querySelector('.header').classList.remove('header--is-hidden');
+        }
+    })
+};
+
+//accordion faq
 function faq(){
     const questions = document.querySelectorAll("[data-faq-answer]");
     const modifier = 'faq__questions__item--is-open';
@@ -16,6 +30,7 @@ function faq(){
     }
 }
 
+//add funcao os botoes
 function tabsMovies(){
     const buttons = document.querySelectorAll("[data-tab-button]");
 
@@ -31,6 +46,7 @@ function tabsMovies(){
     }
 }
 
+//remove indicador de todos tab's active
 function removeIndex(){
     const buttons = document.querySelectorAll("[data-tab-button]");
     for(let i = 0; i < buttons.length; i++) {
@@ -38,6 +54,7 @@ function removeIndex(){
     }
 }
 
+// alterar lista de filmes
 function changeList(){
     const tab = document.querySelectorAll("[data-tab-id]");
     for(let i = 0; i < tab.length; i++) {

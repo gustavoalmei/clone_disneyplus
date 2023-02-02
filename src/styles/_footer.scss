@@ -1,0 +1,63 @@
+@use '../config/variaveis';
+
+.footer{
+    &__container{
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        img{
+            width: 80px;
+            margin: 0 auto 10px;
+        }
+
+        .footer__links{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &__item{
+                display: inline-block;
+
+                a{
+                    text-decoration: none;
+                    margin: 8px 16px;
+                    display: block;
+                    &:hover{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        p{
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.language{
+    display: flex;
+    align-items: center;
+
+    img{
+        height: 18px;
+        width: 18px;
+        margin: 0;
+    }
+
+    &__list{
+        background-color: transparent;
+        color: variaveis.$corPrincipal;
+        border: none;
+        &:hover{
+            color: variaveis.$corSecundaria;
+            cursor: pointer;
+        }
+        
+        option{
+            color: variaveis.$corDeFundo;
+        }
+    }
+}
