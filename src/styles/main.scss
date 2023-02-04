@@ -29,7 +29,9 @@
 
 .text {
     @include text;
-
+    @media(max-width:768px){
+        @include text(14px);
+    }
 }
 
 .text--small {
@@ -44,6 +46,9 @@
 
 .title--big {
     @include title(44px);
+    @media(max-width:768px){
+        @include title(26px);
+    }
 }
 
 .title {

@@ -8,6 +8,10 @@
     text-align: center;
     @media(max-width:768px){
         background-image: url(../images/hero_celular.jpeg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -55px;
+        padding-top: calc(50vw + 25px);
     }
 
     .button{
@@ -22,7 +26,6 @@
     &__content{
         width: 620px;
         @media(max-width: 768px){
-            margin-top: 50vh;
             width: 100%;
         }
 

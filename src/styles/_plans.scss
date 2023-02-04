@@ -15,7 +15,8 @@
         margin-top: 50px;
         @media(max-width: 768px){
             display: block;
-        }
+            margin-top: 0;
+    }
 
         &__item{
             text-align: center;
